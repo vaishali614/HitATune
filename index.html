@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Patatap</title>
+	<title>HitATune</title>
 	<script type="text/javascript" src="paper-full.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
 	<link rel="stylesheet" type="text/css" href="patatap-clone.css">
@@ -166,16 +166,16 @@
           }
         }
 
- 		var circles = [];
- 		function onKeyDown(event){
-           var maxPoint = new Point(view.size.width, view.size.height);
-           var randomPoint = Point.random();
-           var point = maxPoint * randomPoint;
-           var newCircle = new Path.Circle(point, 500);
-           newCircle.fillColor = keyData[event.key].color;
-           keyData[event.key].sound.play();
-           circles.push(newCircle);
-        }
+ 	var circles = [];
+ 	function onKeyDown(event){
+	   var maxPoint = new Point(view.size.width, view.size.height);
+	   var randomPoint = Point.random();
+	   var point = maxPoint * randomPoint;
+	   var newCircle = new Path.Circle(point, 500);
+	   newCircle.fillColor = keyData[event.key].color;
+	   keyData[event.key].sound.play();
+	   circles.push(newCircle);
+	}
         
         function onFrame(){
           for(var i = 0; i< circles.length; i++){
